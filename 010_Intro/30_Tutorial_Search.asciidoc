@@ -191,7 +191,7 @@ GET /megacorp/employee/_search
             },
             "filter": {
                 "range" : {
-                    "age" : { "gt" : 30 } <2>
+                    "age" : { "gte" : 30 } <2>
                 }
             }
         }
@@ -201,7 +201,7 @@ GET /megacorp/employee/_search
 // SENSE: 010_Intro/30_Query_DSL.json
 
 <1> 这部分与我们之前使用的((("match queries")))  `match` _查询_ 一样。
-<2> 这部分是一个 `range` _过滤器_ ，((("range filters"))) 它能找到年龄大于 30 的文档，其中 `gt` 表示_大于_(_great than_)。
+<2> 这部分是一个 `range` _过滤器_ ，((("range filters"))) 它能找到年龄大于 30 的文档，其中 `gte` 表示_大于_(_great than_)。
 
 目前无需太多担心语法问题，后续会更详细地介绍。只需明确我们添加了一个 _过滤器_ 用于执行一个范围查询，并复用之前的 `match` 查询。现在结果只返回了一名员工，叫 Jane Smith，32 岁。
 
